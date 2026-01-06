@@ -1,0 +1,128 @@
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    position: relative;
+    z-index: 10;
+    animation: slideUp 0.4s ease;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.auth-logo {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.auth-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-xs);
+}
+
+.auth-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.938rem;
+}
+
+.auth-form {
+    margin-bottom: var(--spacing-xl);
+}
+
+.auth-error {
+    padding: var(--spacing-md);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid var(--color-danger);
+    border-radius: var(--radius-md);
+    color: var(--color-danger);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.w-full {
+    width: 100%;
+}
+
+.auth-footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.auth-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.auth-link:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Decorations */
+.auth-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.circle-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--color-red);
+    top: -200px;
+    right: -100px;
+}
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-green);
+    bottom: -100px;
+    left: -100px;
+}
+
+.circle-3 {
+    width: 200px;
+    height: 200px;
+    background: var(--color-violet);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: var(--spacing-xl);
+    }
+
+    .auth-title {
+        font-size: 1.5rem;
+    }
+}

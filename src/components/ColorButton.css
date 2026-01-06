@@ -1,0 +1,122 @@
+.color-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-xl);
+    border: 2px solid transparent;
+    background: var(--bg-tertiary);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    min-width: 120px;
+}
+
+.color-btn:hover:not(:disabled) {
+    transform: translateY(-4px);
+}
+
+.color-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.color-emoji {
+    font-size: 2.5rem;
+}
+
+.color-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.color-multiplier {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Red Button */
+.color-btn-red {
+    border-color: var(--color-red);
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, transparent 100%);
+}
+
+.color-btn-red:hover:not(:disabled) {
+    box-shadow: 0 0 30px var(--color-red-glow);
+    border-color: var(--color-red);
+}
+
+.color-btn-red.selected {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(239, 68, 68, 0.1) 100%);
+    box-shadow: 0 0 40px var(--color-red-glow);
+}
+
+.color-btn-red .color-multiplier {
+    background: rgba(239, 68, 68, 0.3);
+    color: var(--color-red);
+}
+
+/* Green Button */
+.color-btn-green {
+    border-color: var(--color-green);
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, transparent 100%);
+}
+
+.color-btn-green:hover:not(:disabled) {
+    box-shadow: 0 0 30px var(--color-green-glow);
+    border-color: var(--color-green);
+}
+
+.color-btn-green.selected {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(34, 197, 94, 0.1) 100%);
+    box-shadow: 0 0 40px var(--color-green-glow);
+}
+
+.color-btn-green .color-multiplier {
+    background: rgba(34, 197, 94, 0.3);
+    color: var(--color-green);
+}
+
+/* Violet Button */
+.color-btn-violet {
+    border-color: var(--color-violet);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, transparent 100%);
+}
+
+.color-btn-violet:hover:not(:disabled) {
+    box-shadow: 0 0 30px var(--color-violet-glow);
+    border-color: var(--color-violet);
+}
+
+.color-btn-violet.selected {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.1) 100%);
+    box-shadow: 0 0 40px var(--color-violet-glow);
+}
+
+.color-btn-violet .color-multiplier {
+    background: rgba(139, 92, 246, 0.3);
+    color: var(--color-violet);
+}
+
+@media (max-width: 768px) {
+    .color-btn {
+        padding: 1rem 1.5rem;
+        min-width: 100px;
+    }
+
+    .color-emoji {
+        font-size: 2rem;
+    }
+
+    .color-label {
+        font-size: 0.875rem;
+    }
+}

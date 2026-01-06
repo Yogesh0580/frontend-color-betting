@@ -1,0 +1,284 @@
+.result-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.result-modal {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-2xl);
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 400px;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Color Glow Effect */
+.result-modal.result-red {
+    box-shadow: 0 0 60px rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.result-modal.result-green {
+    box-shadow: 0 0 60px rgba(34, 197, 94, 0.3);
+    border-color: rgba(34, 197, 94, 0.5);
+}
+
+.result-modal.result-violet {
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+/* Result Announcement */
+.result-announcement {
+    margin-bottom: 1.5rem;
+}
+
+.result-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.result-ball {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.ball-emoji {
+    font-size: 3rem;
+}
+
+.ball-red {
+    background: radial-gradient(circle at 30% 30%, rgba(255, 138, 138, 0.3), rgba(239, 68, 68, 0.2));
+    border: 3px solid var(--color-red);
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.5), inset 0 0 20px rgba(239, 68, 68, 0.2);
+}
+
+.ball-green {
+    background: radial-gradient(circle at 30% 30%, rgba(110, 231, 160, 0.3), rgba(34, 197, 94, 0.2));
+    border: 3px solid var(--color-green);
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.5), inset 0 0 20px rgba(34, 197, 94, 0.2);
+}
+
+.ball-violet {
+    background: radial-gradient(circle at 30% 30%, rgba(184, 164, 248, 0.3), rgba(139, 92, 246, 0.2));
+    border: 3px solid var(--color-violet);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), inset 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.result-color-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.result-modal.result-red .result-color-name {
+    color: var(--color-red);
+}
+
+.result-modal.result-green .result-color-name {
+    color: var(--color-green);
+}
+
+.result-modal.result-violet .result-color-name {
+    color: var(--color-violet);
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 1.5rem 0;
+}
+
+/* User Result */
+.user-result {
+    margin-bottom: 1rem;
+}
+
+.result-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.status-icon {
+    font-size: 1.5rem;
+}
+
+.status-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.result-status.win .status-text {
+    color: var(--color-success);
+}
+
+.result-status.lose .status-text {
+    color: var(--text-muted);
+}
+
+.payout-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.payout-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.payout-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-success);
+    animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.bet-comparison {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* No Bet Message */
+.no-bet-message {
+    padding: 1rem 0;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Close Button */
+.close-btn {
+    margin-top: 1rem;
+    min-width: 150px;
+}
+
+/* Confetti */
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    animation: confetti-fall 3s ease-out forwards;
+}
+
+@keyframes confetti-fall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(400px) rotate(720deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .result-modal {
+        padding: 1.5rem;
+        min-width: 280px;
+        margin: 1rem;
+    }
+
+    .result-ball {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ball-emoji {
+        font-size: 2.5rem;
+    }
+
+    .payout-amount {
+        font-size: 1.5rem;
+    }
+}

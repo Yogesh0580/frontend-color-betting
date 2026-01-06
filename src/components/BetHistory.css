@@ -1,0 +1,253 @@
+.bet-history {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.empty-bets {
+    padding: 3rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.empty-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.bets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border-color);
+}
+
+/* Bet Card */
+.bet-card {
+    background: var(--bg-card);
+    padding: 1rem;
+}
+
+.bet-card.won {
+    border-left: 3px solid var(--color-success);
+}
+
+.bet-card.lost {
+    border-left: 3px solid var(--color-danger);
+}
+
+.bet-card.pending {
+    border-left: 3px solid var(--color-warning);
+}
+
+/* Header */
+.bet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.bet-period {
+    display: flex;
+    flex-direction: column;
+}
+
+.period-label {
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.period-value {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: monospace;
+}
+
+.bet-status-badge {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+}
+
+.bet-status-badge.won {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--color-success);
+}
+
+.bet-status-badge.lost {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--color-danger);
+}
+
+.bet-status-badge.pending {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--color-warning);
+}
+
+/* Times */
+.bet-times {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.time-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-label {
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.time-value {
+    font-size: 0.813rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Color Comparison */
+.bet-colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.color-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.375rem;
+    flex: 1;
+    max-width: 100px;
+}
+
+.color-box .color-label {
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.color-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.color-circle.color-red {
+    background: rgba(239, 68, 68, 0.2);
+    border: 2px solid var(--color-red);
+}
+
+.color-circle.color-green {
+    background: rgba(34, 197, 94, 0.2);
+    border: 2px solid var(--color-green);
+}
+
+.color-circle.color-violet {
+    background: rgba(139, 92, 246, 0.2);
+    border: 2px solid var(--color-violet);
+}
+
+.color-circle.color-unknown {
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-color);
+}
+
+.color-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--bg-tertiary);
+    border-radius: 50%;
+}
+
+.vs-divider span {
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+/* Amounts */
+.bet-amounts {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.amount-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.amount-label {
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.amount-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.amount-value.win {
+    color: var(--color-success);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .bet-card {
+        padding: 0.875rem;
+    }
+
+    .bet-colors {
+        gap: 0.75rem;
+    }
+
+    .color-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .vs-divider {
+        width: 28px;
+        height: 28px;
+    }
+}
